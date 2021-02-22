@@ -1,0 +1,8 @@
+<view class="map-container">
+  <map id="mymap" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" class="map" show-location controls="{{controls}}"
+  bindcontroltap="controltap"></map>
+</view>
+<view class="btns">
+  <view class="btn btn-publish">发布</view>
+  <view class="btn">搜索</view>
+</view>
