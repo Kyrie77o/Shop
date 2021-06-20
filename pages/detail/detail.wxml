@@ -1,0 +1,17 @@
+
+<view class="include">
+  <button class="listd">
+  <text class="listdn">
+ <text>交易人:{{user[0]}}</text><text class="time listdnrt">联系方式：{{user[1]}}</text>
+</text>
+<text class="listdn">
+  <text class="listdnlt">物品：{{user[2]}}</text><text class="listdnrt">价格：{{user[3]}}\n</text>
+</text>
+<text class="listdn">
+  <text class="listdnlt">详情描述：{{user[5]}}</text>
+</text>
+</button>
+
+  <image src="data:image/png;base64,{{coverurl}}" class="tupian">无法显示</image>
+
+</view>

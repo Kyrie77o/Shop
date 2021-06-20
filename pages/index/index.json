@@ -1,4 +1,6 @@
 {
-  
-  "navigationBarTitleText": "萌宠交易平台"
+  "usingComponents": {
+    "select": "/components/select/select"
+  },
+  "navigationBarTitleText": "校内交易平台"
 }

@@ -1,12 +1,20 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/publish/publish",
+    "pages/shop/shop",
+    "pages/detail/detail"
+
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "请点击确定"
+    }
+  },
   "window": {
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#03bbd5",
+    "navigationBarBackgroundColor": "#000",
     "navigationBarTextStyle": "white"
   },
-  "sitemapLocation": "sitemap76.json"
+  "sitemapLocation": "sitemap68.json"
 }

@@ -1,0 +1,62 @@
+page{
+  background:linear-gradient(#141e30,#243b55)
+}
+.include{
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tupian{
+  
+  
+  border: 1rpx solid #fff;
+  margin-top: 1rem;
+  width:100%;
+}
+
+.listd{
+  display: flex;
+  flex-direction: column;
+  line-height: 300rpx;
+  height: 600rpx;
+  width: 100%;
+  font-size: 30rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #fff;
+  color: #fff;
+  background:linear-gradient(#141e30,#243b55);
+  overflow: hidden;
+}
+.listd .listdn{
+  line-height: 100rpx;
+  text-align: center;
+  height: 100rpx;
+  position: relative;
+  display: flex;
+  flex:1;
+  flex-direction: row;
+}
+.listdnrt{
+  position: absolute;
+  right: 0;
+  top:0;
+  margin-right: 1rem;
+}
+.listdnrt{
+  position: absolute;
+  right: 0;
+  top:0;
+  margin-right: 1rem;
+}
+
+.listdnlb{
+  position: absolute;
+  left: 0;
+  bottom:0;
+  margin-right: 1rem;
+}
+.time{
+  font-size: 20rpx;
+  color:#aaa;
+}

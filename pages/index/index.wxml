@@ -1,8 +1,49 @@
-<view class="map-container">
-  <map id="mymap" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" class="map" show-location controls="{{controls}}"
-  bindcontroltap="controltap"></map>
-</view>
+<!-- 头部框 -->
+<view class="userinfo">
+    <block wx:if="{{canIUseOpenData}}" calss="userinfo-opendata">
+      <view class="userinfo-avatar" bindtap="bindViewTap">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+      <view class="container" bindtap="close">
+          <view class="select-wrap">
+              <select id="select" options="{{options}}" key="city_id" text="city_name" bind:change="change"></select>
+          </view>
+      </view>
+      
+    </block>
+    <block wx:elif="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <!-- 按钮框 -->
 <view class="btns">
-  <view class="btn btn-publish">发布</view>
-  <view class="btn">搜索</view>
+  <view class="btn btn-publish">
+    <navigator url="/pages/publish/publish" class="nav">
+      <view class="tex">
+        发布
+        <text class="texta"></text>
+        <text class="textb"></text>
+        <text class="textc"></text>
+        <text class="textd"></text>
+      </view> 
+    </navigator>
+  </view>
+  <view class="btn btn-publish ">
+    <navigator url="/pages/shop/shop" class="nav " id="nav-shop">
+      <view class="tex">
+        购买
+        <text class="texta"></text>
+        <text class="textb"></text>
+        <text class="textc"></text>
+        <text class="textd"></text>
+      </view> 
+    </navigator>
+  </view>
 </view>

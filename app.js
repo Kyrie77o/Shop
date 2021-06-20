@@ -1,20 +1,26 @@
 // app.js
 //用来注册一个小程序
 App({
+  data:{
+    userInfo: {},
+    nickName:"123"
+  },
   globalData:{
 
   },
   onLaunch() {
+    
     try{
       const res=wx.getSystemInfoSync()
       this.globalData.windowHeight=res.windowHeight;
       this.globalData.windowWight=res.windowWidth;
-      
-
+      console.log("nihao")
     }catch(e){}
+    
 
    
   },
+  
   /*onShow(option){//生命周期函数--监听小程序显示，当小程序启动或从后台进入前台显示，会触发onShow
   console.log(option);option
   },

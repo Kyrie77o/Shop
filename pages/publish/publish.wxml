@@ -1,0 +1,45 @@
+<view wx:if="{{!success}}">
+  <view class="row">
+    <label class="title">用户名</label>
+    <button open-type="getUserInfo" class="input-inf" bindtap="handlegetUserInfodata">{{nickName}}</button>
+  </view>
+  <view class="row">
+    <label class="title">物品</label>
+    <view class="info">
+      <input class="input-info" bindinput="handleDetailChange" placeholder="填写你的物品名称"/>
+    </view>
+  </view>
+  <view class="row">
+    <label class="title">说明</label>
+    <view class="info">
+      <input class="input-info" bindinput="handleMessageChange" placeholder="填写你的具体需求"/>
+    </view>
+  </view>
+  <view class="row">
+    <label class="title">联系方式</label>
+    <view class="info">
+      <input class="input-info" bindinput="handleContextChange" placeholder="填写你的联系方式"/>
+    </view>
+  </view>
+  <view class="row">
+    <label class="title">定价</label>
+    <view class="info">
+      <input class="input-info" bindinput="handlePriceChange" placeholder="填写出售价格"/>
+    </view>
+  </view>
+  <!-- 调用图库 -->
+<view class='header'>
+  <label class="title">图片</label>
+  <view class='avatar'>
+    <image bindtap='buttonclick' src="{{tempFilePaths}}"/>
+  </view>
+</view>
+  <view class="submit-button" bindtap="handleSubmit">
+    发送信息
+  </view>
+</view>
+
+<view wx:if="{{success}}" class="success">
+<view class="congratulations"><icon type="success" size="24" class="success-icon" />恭喜提交成功</view>
+<button type="default" class="back-button" bindtap="handleBackTap">返回首页</button>
+</view>

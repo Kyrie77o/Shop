@@ -1,0 +1,28 @@
+page{
+
+}
+.listd{
+  display: flex;
+  flex-direction: column;
+  line-height: 100rpx;
+  width: 100%;
+  font-size: 30rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #fff;
+  color: #fff;
+  background:linear-gradient(#141e30,#243b55);
+  overflow: hidden;
+}
+.listd .listdn{
+  display: flex;
+  flex-direction: row;
+}
+.listdnr{
+  position: absolute;
+  right: 0;
+  margin-right: 1rem;
+}
+.time{
+  font-size: 20rpx;
+  color:#aaa;
+}
